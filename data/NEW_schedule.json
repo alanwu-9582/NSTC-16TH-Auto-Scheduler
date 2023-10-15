@@ -1,0 +1,122 @@
+{
+    "format": "Scheduler_scheduler",
+    "classes": {
+        "morning": {
+            "Monday": {
+                "commander": "平 劉旻叡",
+                "nangong": "新 王鈞誼",
+                "guangfu": {
+                    "main_post": "應 韓光喻",
+                    "light": "孝 楊詠捷",
+                    "human_stopper": "新 劉亮暄",
+                    "car_stopper": "平 劉旻叡"
+                }
+            },
+            "Tuesday": {
+                "commander": "新 劉亮暄",
+                "nangong": "平 劉旻叡",
+                "guangfu": {
+                    "main_post": "新 劉亮暄",
+                    "light": "速 李季軒",
+                    "human_stopper": "信 林志恩",
+                    "car_stopper": "平 汪宜家"
+                }
+            },
+            "Wednesday": {
+                "commander": "仁 游舒涵",
+                "nangong": "孝 楊詠捷",
+                "guangfu": {
+                    "main_post": "信 王禾亘",
+                    "light": "仁 游舒涵",
+                    "human_stopper": "孝 黃宥慈",
+                    "car_stopper": "孝 張方綺"
+                }
+            },
+            "Thursday": {
+                "commander": "愛 陳妍安",
+                "nangong": "愛 陳妍安",
+                "guangfu": {
+                    "main_post": "愛 吳佳甯",
+                    "light": "仁 陳柏銨",
+                    "human_stopper": "仁 游舒涵",
+                    "car_stopper": "新 謝宜恬"
+                }
+            },
+            "Friday": {
+                "commander": "仁 許幃甯",
+                "nangong": "義 李昕叡",
+                "guangfu": {
+                    "main_post": "仁 許幃甯",
+                    "light": "應 韓光喻",
+                    "human_stopper": "信 王禾亘",
+                    "car_stopper": "愛 吳佳甯"
+                }
+            }
+        },
+        "evening": {
+            "Monday": {
+                "nangong": "愛 陳妍安",
+                "palace": "平 汪宜家",
+                "temple": "新 王鈞誼",
+                "guangfu": {
+                    "A": "孝 張方綺",
+                    "B": "速 李季軒",
+                    "C": "孝 黃宥慈",
+                    "D": "仁 陳柏銨"
+                },
+                "zhonghe": [
+                    "平 劉旻叡",
+                    "仁 許幃甯"
+                ]
+            },
+            "Tuesday": {
+                "nangong": "和 吳晉綸",
+                "palace": "仁 許幃甯",
+                "temple": "新 謝宜恬",
+                "guangfu": {
+                    "A": "孝 張方綺",
+                    "B": "新 劉亮暄",
+                    "C": "信 林志恩",
+                    "D": "平 汪宜家"
+                },
+                "zhonghe": [
+                    "孝 黃宥慈",
+                    "新 簡佳瑩"
+                ]
+            },
+            "Wednesday": {
+                "nangong": "孝 黃宥慈",
+                "guangfu": {
+                    "A": "仁 游舒涵",
+                    "B": "信 林志恩",
+                    "C": "平 汪宜家",
+                    "D": "速 李季軒"
+                }
+            },
+            "Thursday": {
+                "nangong": "新 簡佳瑩",
+                "palace": "孝 張方綺",
+                "temple": "速 李季軒",
+                "guangfu": {
+                    "A": "信 林志恩",
+                    "B": "應 范瑀珊",
+                    "C": "愛 陳妍安",
+                    "D": "義 李昕叡"
+                },
+                "zhonghe": [
+                    "仁 陳柏銨",
+                    "和 吳晉綸"
+                ]
+            },
+            "Friday": {
+                "nangong": "新 簡佳瑩",
+                "guangfu": {
+                    "A": "和 吳晉綸",
+                    "B": "仁 陳柏銨",
+                    "C": "義 李昕叡",
+                    "D": "仁 許幃甯"
+                }
+            }
+        }
+    }
+}

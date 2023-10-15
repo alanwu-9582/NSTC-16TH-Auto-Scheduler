@@ -1,0 +1,106 @@
+{
+    "format": "Scheduler_member",
+    "students": [
+        {
+            "name": "a",
+            "unable": []
+        },
+        {
+            "name": "b",
+            "unable": []
+        },
+        {
+            "name": "c",
+            "unable": []
+        },
+        {
+            "name": "d",
+            "unable": []
+        },
+        {
+            "name": "e",
+            "unable": []
+        },
+        {
+            "name": "f",
+            "unable": []
+        },
+        {
+            "name": "g",
+            "unable": []
+        },
+        {
+            "name": "h",
+            "unable": []
+        },
+        {
+            "name": "i",
+            "unable": []
+        },
+        {
+            "name": "j",
+            "unable": []
+        },
+        {
+            "name": "k",
+            "unable": []
+        },
+        {
+            "name": "l",
+            "unable": []
+        },
+        {
+            "name": "m",
+            "unable": []
+        },
+        {
+            "name": "n",
+            "unable": []
+        },
+        {
+            "name": "o",
+            "unable": []
+        },
+        {
+            "name": "p",
+            "unable": []
+        },
+        {
+            "name": "q",
+            "unable": []
+        },
+        {
+            "name": "r",
+            "unable": []
+        },
+        {
+            "name": "s",
+            "unable": []
+        },
+        {
+            "name": "t",
+            "unable": []
+        },
+        {
+            "name": "u",
+            "unable": []
+        }
+    ],
+    "commanders": [
+        {
+            "name": "a"
+        },
+        {
+            "name": "b"
+        },
+        {
+            "name": "c"
+        },
+        {
+            "name": "d"
+        },
+        {
+            "name": "e"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "Time": "時間",
+    "Work": "工作",
+
+    "morning": "早上",
+    "evening": "晚上",
+
+    "full": "整天",
+
+    "Monday": "星期一",
+    "Tuesday": "星期二",
+    "Wednesday": "星期三",
+    "Thursday": "星期四",
+    "Friday": "星期五",
+
+    "Everyday": "每天",
+
+    "commander": "總指揮",
+    "guangfu": "廣福",
+    "human_stopper": "檔人",
+    "car_stopper": "檔車",
+    "light": "控燈",
+    "main_post": "主哨",
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "D",
+
+    "nangong": "南工",
+    "zhonghe": "中和路口",
+    "palace": "宮口",
+    "temple": "廟口"
+}
