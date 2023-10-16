@@ -8,7 +8,7 @@ NSTC-S2 Auto Scheduler
 
 專案簡介
 ---
-這個專案可以協助[南山高中交通服務隊](https://www.instagram.com/nstc_16th/?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==)**偉大的總指揮勤務長大人**排班表。大幅縮減每個月排班表所花的時間
+這個專案可以協助[南山高中交通服務隊](https://www.instagram.com/nstc_16th/?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==)中**偉大的總指揮勤務長大人**排班表。大幅縮減每個月排班表所花的時間
 
 使用說明
 ---
@@ -26,7 +26,7 @@ NSTC-S2 Auto Scheduler
 
 1. 啟動程式。
 2. 點擊匯入名單匯入[符合格式的名單](data/members.json)
-3. 點擊匯入班表模版匯入[符合格式的班表模板](data/schedule.json)
+3. 點擊匯入班表模版匯入:[高一](data/S1_schedule.json)、[高二](data/schedule.json)
 4. 設定最大值勤次數，與最大早班次數
 5. 點擊 "開始排班" 按鈕，程式將自動完成排班。
 6. 匯出班表可以將班表以 csv 格式匯出，可以用 Excel 開啟
@@ -45,7 +45,7 @@ NSTC-S2 Auto Scheduler
 
 版本更新
 ---
-* v1.0.0 (2023/10/15): 初版
+* v1.14.514 (2023/10/16): 初版 
 
 
 待做功能
