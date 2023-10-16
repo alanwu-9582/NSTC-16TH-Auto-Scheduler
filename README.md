@@ -8,7 +8,7 @@ NSTC-S2 Auto Scheduler
 
 專案簡介
 ---
-這個專案可以協助[南山高中交通服務隊](https://www.instagram.com/nstc_16th/?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==)的勤務長排班表。大幅縮減每個月排班表所花的時間
+這個專案可以協助[南山高中交通服務隊](https://www.instagram.com/nstc_16th/?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==)___偉大的總指揮勤務長大人___排班表。大幅縮減每個月排班表所花的時間
 
 使用說明
 ---
