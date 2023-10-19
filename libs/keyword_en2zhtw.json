@@ -16,18 +16,24 @@
     "Everyday": "每天",
 
     "commander": "總指揮",
+
     "guangfu": "廣福",
+
     "human_stopper": "檔人",
     "car_stopper": "檔車",
     "light": "控燈",
+    "driveway_gate": "車道門",
     "main_post": "主哨",
-    "A": "A",
-    "B": "B",
-    "C": "C",
-    "D": "D",
+
+    "guangfu_A": "廣福_A",
+    "guangfu_B": "廣福_B",
+    "guangfu_C": "廣福_C",
+    "guangfu_D": "廣福_D",
 
     "nangong": "南工",
-    "zhonghe": "中和路口",
     "palace": "宮口",
-    "temple": "廟口"
+    "temple": "廟口",
+    "zhonghe": "中和路口",
+
+    "substitute": "替補"
 }

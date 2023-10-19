@@ -23,31 +23,22 @@ class ScheduleWriter:
         csv_writer.writerow(row)
 
     def write_morning(self, csv_writer):
-        for morning_duty in MORNING_DUTIES:
+        for morning_duty in list(self.schedule['morning']['Monday'].keys()):
+            if morning_duty == 'commander': continue
             row = ['早上']
             row.append(self.keyword_en2zhtw[morning_duty])
             for day in DAYS:
-                if morning_duty in GUANGFU_DUTIES:
-                    row.append(self.schedule['morning'][day]['guangfu'][morning_duty])
-                else:
-                    row.append(self.schedule['morning'][day][morning_duty])
+                row.append('\n'.join(self.schedule['morning'][day][morning_duty]))
 
             csv_writer.writerow(row)
 
     def write_evening(self, csv_writer):
-        for evening_duty in EVENING_FULL_DUTIES:
+        for evening_duty in list(self.schedule['evening']['Monday'].keys()):
             row = ['晚上']
             row.append(self.keyword_en2zhtw[evening_duty])
             for day in DAYS:
-                if evening_duty in GUANGFU_DUTIES:
-                    row.append(self.schedule['evening'][day]['guangfu'][evening_duty])
-
-                elif evening_duty in self.schedule['evening'][day]:
-                    if evening_duty == 'zhonghe':
-                        row.append('\n'.join(self.schedule['evening'][day][evening_duty]))
-
-                    else:
-                        row.append(self.schedule['evening'][day][evening_duty])
+                if evening_duty in self.schedule['evening'][day]:
+                    row.append('\n'.join(self.schedule['evening'][day][evening_duty]))
 
                 else:
                     row.append('')
@@ -60,11 +51,11 @@ class ScheduleWriter:
                 csv_writer = csv.writer(csvfile)
                 csv_writer.writerow(['', '', '星期一', '星期二', '星期三', '星期四', '星期五'])
 
-                self.write_commander(csv_writer)
+                if self.schedule_data['grade'] == 'eleven': self.write_commander(csv_writer)
                 self.write_morning(csv_writer)
                 csv_writer.writerow(['' for i in range(7)])
                 self.write_evening(csv_writer)
 
             return 0
         except PermissionError:
-            return ErrorHandler.handle(ErrorHandler, "PermissionError")
+            return ErrorHandler.handle("PermissionError")

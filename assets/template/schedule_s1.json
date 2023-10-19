@@ -1,0 +1,113 @@
+{   
+    "format": "Scheduler_schedule",
+    "grade": "ten",
+    "classes": {    
+        "morning": {       
+            "Monday": {        
+                "main_post": [""],         
+                "light": [""],         
+                "human_stopper": ["", ""],      
+                "car_stopper": ["", ""],      
+                "driveway_gate": [""] ,
+                "nangong": [""],
+                "substitute": ["",""]   
+            },       
+
+            "Tuesday": {         
+                "main_post": [""],         
+                "light": [""],         
+                "human_stopper": ["", ""],      
+                "car_stopper": ["", ""],      
+                "driveway_gate": [""] ,
+                "nangong": [""],
+                "substitute": ["",""]    
+            },       
+
+            "Wednesday": {         
+                "main_post": [""],         
+                "light": [""],         
+                "human_stopper": ["", ""],      
+                "car_stopper": ["", ""],      
+                "driveway_gate": [""] ,
+                "nangong": [""],
+                "substitute": ["",""]   
+            },       
+
+            "Thursday": {         
+                "main_post": [""],         
+                "light": [""],         
+                "human_stopper": ["", ""],      
+                "car_stopper": ["", ""],      
+                "driveway_gate": [""] ,
+                "nangong": [""],
+                "substitute": ["",""]   
+            },       
+
+            "Friday": {         
+                "main_post": [""],         
+                "light": [""],         
+                "human_stopper": ["", ""],      
+                "car_stopper": ["", ""],      
+                "driveway_gate": [""] ,
+                "nangong": [""],
+                "substitute": ["",""]   
+            }     
+        },     
+
+        "evening": {         
+            "Monday": {         
+                "guangfu_A": ["",""],         
+                "guangfu_B": [""],           
+                "guangfu_C": ["",""],        
+                "guangfu_D": ["",""],
+                "nangong": [""],
+                "substitute": ["",""],
+                "palace" : ["","", ""],
+                "temple": ["","", ""],
+                "zhonghe": ["", "", "", "", "", ""]
+            },       
+
+            "Tuesday": {         
+                "guangfu_A": ["",""],         
+                "guangfu_B": [""],           
+                "guangfu_C": ["",""],        
+                "guangfu_D": ["",""],
+                "nangong": [""],
+                "substitute": ["",""],
+                "palace" : ["","", ""],
+                "temple": ["","", ""],
+                "zhonghe": ["", "", "", "", "", ""]
+            },       
+
+            "Wednesday": {         
+                "guangfu_A": ["",""],         
+                "guangfu_B": [""],           
+                "guangfu_C": ["",""],        
+                "guangfu_D": ["",""],
+                "nangong": [""],
+                "substitute": ["",""]
+            },       
+
+            "Thursday": {         
+                "guangfu_A": ["",""],         
+                "guangfu_B": [""],           
+                "guangfu_C": ["",""],        
+                "guangfu_D": ["",""],
+                "nangong": [""],
+                "substitute": ["",""],
+                "palace" : ["","", ""],
+                "temple": ["","", ""],
+                "zhonghe": ["", "", "", "", "", ""]
+            },       
+
+            "Friday": {         
+                "guangfu_A": ["",""],         
+                "guangfu_B": [""],           
+                "guangfu_C": ["",""],        
+                "guangfu_D": ["",""],
+                "nangong": [""],
+                "substitute": ["",""]
+            }     
+        }      
+    }
+}

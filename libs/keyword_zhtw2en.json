@@ -27,19 +27,28 @@
     "總指揮": "commander",
 
     "廣福": "guangfu",
+    
     "檔人": "human_stopper",
     "檔車": "car_stopper",
     "控燈": "light",
     "主哨": "main_post",
-    "A": "A",
-    "B": "B",
-    "C": "C",
-    "D": "D",
+    "車道門": "driveway_gate",
+
+    "A": "guangfu_A",
+    "B": "guangfu_B",
+    "C": "guangfu_C",
+    "D": "guangfu_D",
+    "廣福_A": "guangfu_A",
+    "廣福_B": "guangfu_B",
+    "廣福_C": "guangfu_C",
+    "廣福_D": "guangfu_D",
 
     "南工": "nangong",
     "路口": "zhonghe",
     "中和路口": "zhonghe",
     "宮口": "palace",
     "工口": "palace",
-    "廟口": "temple"
+    "廟口": "temple",
+
+    "替補": "substitute"
 }

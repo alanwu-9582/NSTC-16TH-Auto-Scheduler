@@ -2,105 +2,105 @@
     "format": "Scheduler_member",
     "students": [
         {
-            "name": "a",
+            "name": "abc",
             "unable": []
         },
         {
-            "name": "b",
+            "name": "bcd",
             "unable": []
         },
         {
-            "name": "c",
+            "name": "cde",
             "unable": []
         },
         {
-            "name": "d",
+            "name": "def",
             "unable": []
         },
         {
-            "name": "e",
+            "name": "efg",
             "unable": []
         },
         {
-            "name": "f",
+            "name": "fgh",
             "unable": []
         },
         {
-            "name": "g",
+            "name": "ghi",
             "unable": []
         },
         {
-            "name": "h",
+            "name": "hij",
             "unable": []
         },
         {
-            "name": "i",
+            "name": "ijk",
             "unable": []
         },
         {
-            "name": "j",
+            "name": "jkl",
             "unable": []
         },
         {
-            "name": "k",
+            "name": "klm",
             "unable": []
         },
         {
-            "name": "l",
+            "name": "lmn",
             "unable": []
         },
         {
-            "name": "m",
+            "name": "nmo",
             "unable": []
         },
         {
-            "name": "n",
+            "name": "mop",
             "unable": []
         },
         {
-            "name": "o",
+            "name": "opq",
             "unable": []
         },
         {
-            "name": "p",
+            "name": "pqr",
             "unable": []
         },
         {
-            "name": "q",
+            "name": "qrs",
             "unable": []
         },
         {
-            "name": "r",
+            "name": "rst",
             "unable": []
         },
         {
-            "name": "s",
+            "name": "stu",
             "unable": []
         },
         {
-            "name": "t",
+            "name": "tuv",
             "unable": []
         },
         {
-            "name": "u",
+            "name": "uvw",
             "unable": []
         }
     ],
     "commanders": [
         {
-            "name": "a"
+            "name": "abc"
         },
         {
-            "name": "b"
+            "name": "bcd"
         },
         {
-            "name": "c"
+            "name": "cde"
         },
         {
-            "name": "d"
+            "name": "def"
         },
         {
-            "name": "e"
+            "name": "efg"
         }
     ]
 }
