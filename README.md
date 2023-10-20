@@ -13,8 +13,8 @@ NSTC-16TH Auto Scheduler
 使用說明
 ---
 下載與安裝:
-至 [Releases](https://github.com/alanwu-9582/NSTC-S2-Auto-Scheduler/releases) NSTC-16TH Auto Scheduler
-解壓縮後執行 main.exe ，如果無法執行請嘗試關閉防毒軟體 :P
+至 [Releases](https://github.com/alanwu-9582/NSTC-S2-Auto-Scheduler/releases) 下載最新版的 NSTC-16TH-Auto-Scheduler_Setup.zip 
+解壓縮後執行 NSTC-16TH-Auto-Scheduler_Setup.exe 來完成安裝
 
 
 開始使用:

@@ -200,7 +200,7 @@ class AutoSchedulerGUI:
             self.current_student_index = selected_student_index
 
         else:
-            self.updateLog("請選擇一個人類 D:")
+            self.updateLog("請選擇一個成員 D:")
 
     def add_time(self):
         added_day_index = self.day_editing.current()
