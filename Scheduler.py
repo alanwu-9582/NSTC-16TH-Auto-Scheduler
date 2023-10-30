@@ -22,6 +22,8 @@ class Scheduler:
         for student in self.students:
             student["morning_duties_count"] = 0
             student["evening_duties_count"] = 0
+            student["morning_duties"] = []
+            student["evening_duties"] = []
 
         self.new_schedule = self.schedule
         self.new_classes = self.new_schedule["classes"]
@@ -43,8 +45,11 @@ class Scheduler:
                 self.new_classes['morning'][day][morning_duty][0] = selected_commander
                 self.new_classes['evening'][day][evening_duty][0] = selected_commander
 
-                self.students[self.students_name.index(selected_commander)]['morning_duties_count'] += 1
-                self.students[self.students_name.index(selected_commander)]['evening_duties_count'] += 1
+                selected_commander_index = self.students_name.index(selected_commander)
+                self.students[selected_commander_index]['morning_duties_count'] += 1
+                self.students[selected_commander_index]['evening_duties_count'] += 1
+                self.students[selected_commander_index][f"morning_duties"].append(f'{day} {TIMES[0]} {evening_duty}')
+                self.students[selected_commander_index][f"evening_duties"].append(f'{day} {TIMES[1]} {morning_duty}')
 
                 commanders.remove(selected_commander)
             return 0
@@ -165,6 +170,7 @@ class Scheduler:
                             self.new_classes[time][day][duty][i] = selected_student
                             student_index = self.students_name.index(selected_student)
                             self.students[student_index][f"{time}_duties_count"] += 1
+                            self.students[student_index][f"{time}_duties"].append(f'{day} {time} {duty}')
         return 0
 
     def assign_student_to_duty(self, time, current_member, pecise_duty_dict, worktime_available_students):
@@ -173,7 +179,7 @@ class Scheduler:
                 duty_available_students = self.filter_duty_available_students(worktime_available_students, pecise_duty_dict)
                 students_data = [self.students[self.students_name.index(duty_available_student)] for duty_available_student in duty_available_students]
 
-                weights_formula = lambda x: 1 / pow(x+0.01, 2)
+                weights_formula = lambda x: pow(1/10, x)
                 students_choices_weights  = [weights_formula(student_data[f'{time}_duties_count']) for student_data in students_data]
                 selected_students = random.choices(duty_available_students, weights=students_choices_weights, k=100)
                 counter = Counter(selected_students)

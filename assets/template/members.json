@@ -1,106 +1,60 @@
 {
     "format": "Scheduler_member",
     "students": [
-        {
-            "name": "abc",
-            "unable": []
-        },
-        {
-            "name": "bcd",
-            "unable": []
-        },
-        {
-            "name": "cde",
-            "unable": []
-        },
-        {
-            "name": "def",
-            "unable": []
-        },
-        {
-            "name": "efg",
-            "unable": []
-        },
-        {
-            "name": "fgh",
-            "unable": []
-        },
-        {
-            "name": "ghi",
-            "unable": []
-        },
-        {
-            "name": "hij",
-            "unable": []
-        },
-        {
-            "name": "ijk",
-            "unable": []
-        },
-        {
-            "name": "jkl",
-            "unable": []
-        },
-        {
-            "name": "klm",
-            "unable": []
-        },
-        {
-            "name": "lmn",
-            "unable": []
-        },
-        {
-            "name": "nmo",
-            "unable": []
-        },
-        {
-            "name": "mop",
-            "unable": []
-        },
-        {
-            "name": "opq",
-            "unable": []
-        },
-        {
-            "name": "pqr",
-            "unable": []
-        },
-        {
-            "name": "qrs",
-            "unable": []
-        },
-        {
-            "name": "rst",
-            "unable": []
-        },
-        {
-            "name": "stu",
-            "unable": []
-        },
-        {
-            "name": "tuv",
-            "unable": []
-        },
-        {
-            "name": "uvw",
-            "unable": []
-        }
+        {"name": "abc", "unable": []},
+        {"name": "bcd", "unable": []},
+        {"name": "cde", "unable": []},
+        {"name": "def", "unable": []},
+        {"name": "efg", "unable": []},
+        {"name": "fgh", "unable": []},
+        {"name": "ghi", "unable": []},
+        {"name": "hij", "unable": []},
+        {"name": "ijk", "unable": []},
+        {"name": "jkl", "unable": []},
+        {"name": "klm", "unable": []},
+        {"name": "lmn", "unable": []},
+        {"name": "nmo", "unable": []},
+        {"name": "mop", "unable": []},
+        {"name": "opq", "unable": []},
+        {"name": "pqr", "unable": []},
+        {"name": "qrs", "unable": []},
+        {"name": "rst", "unable": []},
+        {"name": "stu", "unable": []},
+        {"name": "tuv", "unable": []},
+        {"name": "uvw", "unable": []},
+        {"name": "vwx", "unable": []},
+        {"name": "wxy", "unable": []},
+        {"name": "xyz", "unable": []},
+        {"name": "yza", "unable": []},
+        {"name": "zab", "unable": []},
+        {"name": "abc2", "unable": []},
+        {"name": "bcd2", "unable": []},
+        {"name": "cde2", "unable": []},
+        {"name": "def2", "unable": []},
+        {"name": "efg2", "unable": []},
+        {"name": "fgh2", "unable": []},
+        {"name": "ghi2", "unable": []},
+        {"name": "hij2", "unable": []},
+        {"name": "ijk2", "unable": []},
+        {"name": "jkl2", "unable": []},
+        {"name": "klm2", "unable": []},
+        {"name": "lmn2", "unable": []},
+        {"name": "nmo2", "unable": []},
+        {"name": "mop2", "unable": []},
+        {"name": "opq2", "unable": []},
+        {"name": "pqr2", "unable": []},
+        {"name": "qrs2", "unable": []},
+        {"name": "rst2", "unable": []},
+        {"name": "stu2", "unable": []},
+        {"name": "tuv2", "unable": []},
+        {"name": "uvw2", "unable": []},
+        {"name": "vwx2", "unable": []}
     ],
     "commanders": [
-        {
-            "name": "abc"
-        },
-        {
-            "name": "bcd"
-        },
-        {
-            "name": "cde"
-        },
-        {
-            "name": "def"
-        },
-        {
-            "name": "efg"
-        }
+        {"name": "abc"},
+        {"name": "bcd"},
+        {"name": "cde"},
+        {"name": "def"},
+        {"name": "efg"}
     ]
 }

@@ -3,8 +3,10 @@ import json
 import os
 from tkinter import ttk, filedialog
 from Constants import *
+from ErrorHandler import ErrorHandler
 from Scheduler import Scheduler
 from ScheduleWriter import ScheduleWriter
+from ScheduleAnalyzer import ScheduleAnalyzer
 
 with open(f'libs/keyword_zhtw2en.json', 'r', encoding='utf-8') as jfile:
     keyword_zhtw2en = json.load(jfile)
@@ -22,8 +24,8 @@ class AutoSchedulerGUI:
         self.intitializeData()
 
     def intitializeUI(self):
-        self.master.geometry('575x495')
-        self.master.title("NSTC-S2 Auto Scheduler")
+        self.master.geometry('575x520')
+        self.master.title("NSTC-16TH Auto Scheduler")
         self.master.iconbitmap("assets/icon.ico")
         self.master.config(bg="#eeeeee", padx = 5, pady = 5)
 
@@ -41,6 +43,8 @@ class AutoSchedulerGUI:
         self.students.config(values=self.students_name)
         self.config_editing_btns(tk.DISABLED)
         self.current_student_index = -1
+        self.current_student.set('')
+        self.last_editon = self.editing_zone.get('0.0', 'end').split('\n')
 
     def createFrames(self):
         self.top_frame = tk.Frame(self.master)
@@ -88,7 +92,7 @@ class AutoSchedulerGUI:
         self.bottom_bottom_input_frame.config(bg="#eeeeee", padx=5, pady=5)
 
     def createObject(self):
-        self.log = tk.Text(self.right_top_frame, width=25,  height=16, font=("System", 10), relief="solid", state=tk.DISABLED)
+        self.log = tk.Text(self.right_top_frame, width=25,  height=17, font=("System", 10), relief="solid", state=tk.DISABLED)
         self.log.grid(pady=5, columnspan=40)
         self.log_count = 0
 
@@ -103,7 +107,7 @@ class AutoSchedulerGUI:
         Spinbox = tk.Spinbox(self.bottom_middle_input_frame, from_=1, to=20, textvariable=self.max_duties_count, wrap=True)
         Spinbox.config(width=15)
         Spinbox.grid(row=0, column=1)
-        self.max_duties_count.set(4)
+        self.max_duties_count.set(3)
 
         Label = tk.Label(self.bottom_middle_input_frame, bg="#eeeeee", font = "MicrosoftJhengHeiUI 12", text = "最大早班次數")
         Label.config(width=13) 
@@ -123,9 +127,18 @@ class AutoSchedulerGUI:
         Spinbox = tk.Spinbox(self.bottom_middle_input_frame, from_=0, to=10, textvariable=self.max_error_depth, wrap=True)
         Spinbox.config(width=15)
         Spinbox.grid(row=1, column=1)
-        self.max_error_depth.set(10)
+        self.max_error_depth.set(15)
 
     def createEditingZone(self):
+        Label = tk.Label(self.editing_top_frame, bg="#bbbbbb", font = "MicrosoftJhengHeiUI 12", text = "正在編輯:")
+        Label.config(width=15) 
+        Label.grid(row=0, column=0)
+
+        self.current_student = tk.StringVar()
+        self.current_student_Label = tk.Label(self.editing_top_frame, bg="#aaaaaa", font = "MicrosoftJhengHeiUI 12", textvariable=self.current_student)
+        self.current_student_Label.config(width=17) 
+        self.current_student_Label.grid(row=0, column=1)
+
         self.editing_zone = tk.Text(self.editing_top_frame, width=30,  height=9, font=("Microsoft JhengHei UI", 12, "bold"), relief="solid")
         self.editing_zone.grid(pady=5, columnspan=40)
 
@@ -174,6 +187,15 @@ class AutoSchedulerGUI:
         self.attachFile_schedule_btn = ttk.Button(self.bottom_bottom_input_frame, text="匯入班表模板", width=DEAFULT_BUTTON_WIDTH, command=self.attachFile_schedule)
         self.attachFile_schedule_btn.grid(row=0, column=3, padx=1, pady=2)
 
+        self.export_schedule_btn = ttk.Button(self.bottom_bottom_input_frame, text="分析班表", width=DEAFULT_BUTTON_WIDTH, command=self.analyze_schedule)
+        self.export_schedule_btn.grid(row=1, column=0, padx=1, pady=2)
+
+        self.export_schedule_btn = ttk.Button(self.bottom_bottom_input_frame, text="開發中", width=DEAFULT_BUTTON_WIDTH, command=self.develop, state=tk.DISABLED)
+        self.export_schedule_btn.grid(row=1, column=1, padx=1, pady=2)
+
+        self.export_schedule_btn = ttk.Button(self.bottom_bottom_input_frame, text="開發中", width=DEAFULT_BUTTON_WIDTH, command=self.develop, state=tk.DISABLED)
+        self.export_schedule_btn.grid(row=1, column=2, padx=1, pady=2)
+
         self.export_schedule_btn = ttk.Button(self.bottom_bottom_input_frame, text="匯出班表", width=DEAFULT_BUTTON_WIDTH, command=self.export_schedule)
         self.export_schedule_btn.grid(row=1, column=3, padx=1, pady=2)
 
@@ -181,9 +203,16 @@ class AutoSchedulerGUI:
         self.save_editon_btn.config(state=state)
         self.add_time_btn.config(state=state)
         self.add_duty_btn.config(state=state)
+        self.editing_zone.config(state=state)
 
     def select_student(self):
         selected_student_index = self.students.current()
+
+        if self.last_editon != self.editing_zone.get('0.0', 'end').split('\n'):
+            unsave_msgBox = tk.messagebox.askquestion('編輯未儲存','是否要儲存編輯?')
+            if unsave_msgBox == 'yes':
+                self.save_editon()
+        
         if selected_student_index >= 0:
             self.editing_zone.delete("1.0", "end")
 
@@ -198,6 +227,8 @@ class AutoSchedulerGUI:
 
             self.config_editing_btns(tk.NORMAL)
             self.current_student_index = selected_student_index
+            self.current_student.set(self.students_name[self.current_student_index])
+            self.last_editon = self.editing_zone.get('0.0', 'end').split('\n')
 
         else:
             self.updateLog("請選擇一個成員 D:")
@@ -255,7 +286,9 @@ class AutoSchedulerGUI:
                     unable_setting.append(translated_word)
         
         if self.current_student_index != -1:
+            self.last_editon = editing_data
             self.members_data[self.current_student_index]['unable'] = unable_setting
+            self.current_student.set(f'{self.students_name[self.current_student_index]}')
             self.updateLog(f'已經記住了 {self.members_data[self.current_student_index]["name"]} 的設定~')
 
         with open(f'data/{self.members_file}', 'w', encoding='utf-8') as jfile:
@@ -285,7 +318,7 @@ class AutoSchedulerGUI:
         self.start_scheduler_btn.config(state=tk.NORMAL)
 
     def tutorial(self):
-        os.startfile(r'assets\NSTC-S2 Docs.pdf')
+        os.startfile(r'assets\NSTC-16TH Docs.pdf')
 
     def attachFile_member(self):
         file_path = filedialog.askopenfilename(title="Import Members", filetypes= [("Json Files","*.json")])
@@ -322,11 +355,41 @@ class AutoSchedulerGUI:
 
             self.updateLog("這是啥呢>< 好像不是對的格式")
 
+    def analyze_schedule(self):
+        try:
+            schedule_analyzer = ScheduleAnalyzer(f'NEW_{self.members_file}')
+            schedule_analyzer.analyze()
+            self.updateLog("完成分析!")
+            os.startfile('Analyze_report.txt')
+            
+        except FileNotFoundError:
+            self.updateLog(ErrorHandler.handle('FileNotFoundError'))
+
+    def develop(self):
+        pass
+
     def export_schedule(self):
-        schedule_writer = ScheduleWriter(f'NEW_{self.schedule_file}')
-        feedback = schedule_writer.write_to_csv()
-        self.updateLog(feedback if feedback else "班表已用表格格式匯出~")
-        os.startfile(r'NEW_schedule.csv')
+        try:
+            file_path = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=(("CSV files", "*.csv"), ("All files", "*.*")))
+            if file_path:
+                schedule_writer = ScheduleWriter(f'NEW_{self.schedule_file}', file_path)
+                feedback = schedule_writer.write_to_csv()
+                if feedback:
+                    self.updateLog(feedback)
+                    return
+                
+                try:
+                    os.startfile(file_path)
+
+                except:
+                    folder_path = os.path.dirname(file_path)
+                    os.startfile(folder_path)
+
+                self.updateLog(feedback if feedback else "班表已用表格格式匯出~")
+
+        except FileNotFoundError:
+            self.updateLog(ErrorHandler.handle('FileNotFoundError'))
+
 
     def updateLog(self, arg: str):
         self.log.config(state=tk.NORMAL)
